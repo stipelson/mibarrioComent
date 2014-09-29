@@ -41,14 +41,14 @@
 		else{
 			// se imprime la imagen del usuario que inicio sesion
 
-			echo "<img src='".$c_usuario->get_Foto()."' border='0' width='180' height='200'>"; 
+			echo "<img src='".$c_usuario->get_Foto()."' border='0' width='160' height='190'>"; 
 
 			echo"</div>";
 			//aqui termina la div de la imagen
 
 
 			// imprime el nombre de usuario abajo de la imagen, en el menu
-			echo "<h1>".$c_usuario->get_Usuario()."</h1><br>"; 
+			echo "<h1>".$c_usuario->get_Usuario()."</h1>"; 
 			// se incluyen las clases a usar, en caso de no haber sido incluidas antes
 			include_once '../php/Controlador_Perfil.php';
 			include_once '../php/Modelo_Perfil.php';
@@ -91,7 +91,7 @@
 			}
 
 			// imprime el nombre del perfil asociado al usuario
-			echo "<br><br><h2> Tipo de perfil: <br>".$c_perfil->get_Nombre()."</h2>";
+			echo "<br><h2> Tipo de perfil: <br>".$c_perfil->get_Nombre()."</h2>";
 		}
 
 

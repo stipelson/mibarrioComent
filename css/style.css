@@ -2,15 +2,14 @@
 
 body {
   
-  //background-color:#000000;
-  background:url(../resources/wallNaranja.png) repeat;
+  background-color:#FFFFFF;
   font-family: 'Roboto', sans-serif;
 }
 
 .login-card {
   padding: 30px;
   width: 274px;
-  background-color: #FFFFFF;
+  background-color: #FCEAD7;
   position:absolute;
   top: 50%;
   left: 50%;
