@@ -8,6 +8,11 @@
 
 <title>Mi Barrio</title>
 <link rel="stylesheet" href="../css/perfil.css" media="screen" type="text/css" />
+	<link rel="stylesheet" type="text/css" media="screen and (max-width : 1200px)" href="../css/pequeno.css" /> 
+	<link rel="stylesheet" type="text/css" media="screen and (min-width : 1201px)" href="../css/mediano.css" /> 
+	<link rel="stylesheet" type="text/css" media="screen and (min-width : 1400px)" href="../css/grande.css" />
+<link rel="stylesheet" href="../css/tablas.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="../css/varios.css" media="screen" type="text/css" />
 
 </head>
 <body>
@@ -41,7 +46,7 @@
 		else{
 			// se imprime la imagen del usuario que inicio sesion
 
-			echo "<img src='".$c_usuario->get_Foto()."' border='0' width='160' height='190'>"; 
+			echo "<img src='".$c_usuario->get_Foto()."' border='0' width='160' height='180'>"; 
 
 			echo"</div>";
 			//aqui termina la div de la imagen
@@ -61,37 +66,48 @@
 
 				
 			// de acuerdo a los permisos del perfil, imprime o no los links de cada permiso
+			echo"<label for='show-menu' class='show-menu'>Menu</label>
+			<input type='checkbox' id='show-menu' role='button'>";
+
+			echo"<ul id='menu'>";
+
 			$enlace_sistema = "bajo";
 			if($c_perfil->get_PermisoSistema()){
 				$enlace_sistema = "alto";
 			}
-			echo "<div class='login-help'>";
-			echo "<a href='Sistema.php?gestion=$enlace_sistema'>Gesti&oacute;n de usuarios</a></div>";
+			echo "<li>
+			<div class='login-help'>";
+			echo "<a href='Sistema.php?gestion=$enlace_sistema'>Gesti&oacute;n de usuarios</a></div>
+			</li>
+			<li>";
 
 			if($c_perfil->get_PermisoPerfiles()){
-				echo "<div class='login-help'>";
-				echo "<a href='Gestor_Perfil.php?gestion=perfil'>Gesti&oacute;n Perfil</a></div>";
+				echo "<li>
+				<div class='login-help'>";
+				echo "<a href='Gestor_Perfil.php?gestion=perfil'>Gesti&oacute;n Perfil</a></div>
+				</li>";
 			}
 			if($c_perfil->get_PermisoProductos()){
-				echo "<div class='login-help'>";
-				echo "<a href='#'>Productos</a></div>";
+				echo "<li><div class='login-help'>";
+				echo "<a href='#'>Productos</a></div></li>";
 			}
 			if($c_perfil->get_PermisoInventario()){
-				echo "<div class='login-help'>";
-				echo "<a href='#'>Inventario</a></div>";
+				echo "<li><div class='login-help'>";
+				echo "<a href='#'>Inventario</a></div></li>";
 			}
 			if($c_perfil->get_PermisoFacturacion()){
-				echo "<div class='login-help'>";
-				echo "<a href='#'>Facturaci&oacute;n</a></div>";
+				echo "<li><div class='login-help'>";
+				echo "<a href='#'>Facturaci&oacute;n</a></div></li>";
 			}
 
 			if($c_perfil->get_PermisoReportes()){
-				echo "<div class='login-help'>";
-				echo "<a href='#'>Reportes</a></div>";
+				echo "<li><div class='login-help'>";
+				echo "<a href='#'>Reportes</a></div></li>";
 			}
+			echo"</ul>";
 
 			// imprime el nombre del perfil asociado al usuario
-			echo "<br><h2> Tipo de perfil: <br>".$c_perfil->get_Nombre()."</h2>";
+			echo "<h2> <br>Tipo de perfil: <br>".$c_perfil->get_Nombre()."</h2>";
 		}
 
 
