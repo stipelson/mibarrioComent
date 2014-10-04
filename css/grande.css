@@ -38,11 +38,6 @@
 }
 
 .menu-bar a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: 400;
-  text-align: center;
-  display: inline-block;
   //opacity: 0.6;
   transition: opacity ease 0.5s;
 }
@@ -96,8 +91,8 @@ li a {
 	text-align: center;
 	font-size: 0.9em;
 	border-bottom: 2px solid orange;
-	padding-bottom: 5px;
-	padding-top:8px;
+	padding-bottom: 0px;
+	padding-top:3px;
 
 }
 

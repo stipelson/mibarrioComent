@@ -10,14 +10,14 @@
 
 <!--Comienzo de la div que contiene el form-->
 <div class="login-card">
-	<h1>Mi Barrio</h1><br>
+	<h1>Mi Barrio</h1>
 
 			<!--comienzo del form, se especifica el metodo de envio y el destino-->
 			<form action="php/validacion.php" method="post">
-			Usuario:
+			<h2>Usuario:</h2>
 			<!--Input del form, campos-->
 			<input type="text" name="user" placeholder="Nombre de usuario" maxlength="8" required="required">
-			Contrase&ntilde;a:
+			<h2>Contrase&ntilde;a:</h2>
 			<input type="password" name="pass" placeholder="Contrase&ntilde;a" maxlength="8" required="required">
 
 			<!--Boton para enviar el contenido del form-->
