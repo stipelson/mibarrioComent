@@ -1,7 +1,7 @@
 <?php
 	// incluye las clases con metodos necesarios para la creacion del perfil
-	include_once '../php/Controlador_Perfil.php';
-	include_once '../php/Modelo_Perfil.php';
+	include_once '../Controladores/Controlador_Perfil.php';
+	include_once '../Modelos/Modelo_Perfil.php';
 
 	// obitne el nombre(string) y permisos(boolean) del nuevo perfil ingresados en el form. 
 	$nombre = $_REQUEST['nomb_Perfil'];

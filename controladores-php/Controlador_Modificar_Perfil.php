@@ -1,7 +1,7 @@
 <?php
 	// incluye los archivos con las clases y metodos necesarios
-	include_once '../php/Controlador_Perfil.php';
-	include_once '../php/Modelo_Perfil.php';
+	include_once '../Controladores/Controlador_Perfil.php';
+	include_once '../Modelos/Modelo_Perfil.php';
 
 	// se obitnene los nuevos datos del perfil
 	$nombre = $_REQUEST['newnomb'];

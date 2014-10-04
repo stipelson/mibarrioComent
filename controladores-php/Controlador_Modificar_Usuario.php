@@ -1,8 +1,8 @@
 <?php
-	include_once '../php/Controlador_Usuario.php';
-	include_once '../php/Modelo_Usuario.php';
-	include_once '../php/Controlador_Perfil.php';
-	include_once '../php/Modelo_Perfil.php';
+	include_once '../Controladores/Controlador_Usuario.php';
+	include_once '../Modelos/Modelo_Usuario.php';
+	include_once '../Controladores/Controlador_Perfil.php';
+	include_once '../Modelos/Modelo_Perfil.php';
 
 	$num_id = $_REQUEST['n_id'];
 	$nombres= $_REQUEST['nom'];

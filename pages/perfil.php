@@ -20,13 +20,12 @@
 <div class='sesion-bar'>
 	<a href='../php/Cerrar_sesion.php'>Cerrar sesi&oacute;n
 	<img src='../resources/cerrar_sesion.png' width='20' height='20' href='#' alt="Cerrar Sesion"></a>
-	
 </div>
 
 <div class="menu-bar">
 	<div class='image-perfil'>
 		<?php 
-		include_once '../php/Modelo_Usuario.php';
+		include_once '../Modelos/Modelo_Usuario.php';
 		include_once '../php/Controlador_Usuario.php';
 
 		// se crean los objetos que se usaran para mostrar el menu dependiendo de los permisos
@@ -56,7 +55,7 @@
 			echo "<h1>".$c_usuario->get_Usuario()."</h1>"; 
 			// se incluyen las clases a usar, en caso de no haber sido incluidas antes
 			include_once '../php/Controlador_Perfil.php';
-			include_once '../php/Modelo_Perfil.php';
+			include_once '../Modelos/Modelo_Perfil.php';
 			// se crean los objetos que se usaran en la impresion del menu
 			$c_perfil = new Controlador_Perfil();
 			$m_perfil = new Modelo_Perfil($c_perfil);
@@ -84,7 +83,7 @@
 			if($c_perfil->get_PermisoPerfiles()){
 				echo "<li>
 				<div class='login-help'>";
-				echo "<a href='Gestor_Perfil.php?gestion=perfil'>Gesti&oacute;n Perfil</a></div>
+				echo "<a href='Gestion_Perfil.php?gestion=perfil'>Gesti&oacute;n Perfil</a></div>
 				</li>";
 			}
 			if($c_perfil->get_PermisoProductos()){

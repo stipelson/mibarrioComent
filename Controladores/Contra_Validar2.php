@@ -10,7 +10,7 @@
 
 	<?php
 		// inclusion del archivo con la clase
-		include '../Modelos/Modelo_Logueo.php';
+		include 'Modelo_Logueo.php';
 		
 		//instanciacion de la clase
 		$validar = new Modelo_Logueo();

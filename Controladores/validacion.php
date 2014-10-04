@@ -7,7 +7,7 @@
 
 
 	//llamado de los archivos que contienen las clases y metodos necesarios para el logueo
-	include '../Modelos/Modelo_Logueo.php';
+	include 'Modelo_Logueo.php';
 	include 'Controlador_Logueo.php';
 	// 				"Main"
 	//creacion de los objetos, instancias de las clases modelo y controlador logueo

@@ -15,7 +15,7 @@
 		//si existe, llama a Contra_Validar2 para que muestre la contraseña
 
 			include 'Controlador_Logueo.php';
-			include '../Modelos/Modelo_Logueo.php';
+			include 'Modelo_Logueo.php';
 			
 			$controlador = new Controlador_Logueo();
 			$validar = new Modelo_Logueo($controlador);

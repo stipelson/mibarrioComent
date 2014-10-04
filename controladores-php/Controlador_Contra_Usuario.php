@@ -1,6 +1,6 @@
 <?php
-	include_once '../php/Controlador_Usuario.php';
-	include_once '../php/Modelo_Usuario.php';
+	include_once '../Controladores/Controlador_Usuario.php';
+	include_once '../Modelos/Modelo_Usuario.php';
 
 	$num_id = $_REQUEST['id'];
 	$password= $_REQUEST['pass'];
